@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await client.get('/');
+        const response = await client.get('/api/tasks');   // ✅ FIXED
         setTasks(response.data);
       } catch {
         setError('Failed to load tasks');
@@ -20,18 +20,23 @@ const Home = () => {
     fetchTasks();
   }, []);
 
+  
   const addTask = async (text) => {
     try {
-      const response = await client.post('/', { text });
+      const response = await client.post('/api/tasks', { text });  // ✅ FIXED
+
+      
       setTasks((prev) => [response.data, ...prev]);
     } catch {
       setError('Unable to add task');
     }
   };
 
+
   const updateTask = async (id, data) => {
     try {
-      const response = await client.put(`/${id}`, data);
+      const response = await client.put(`/api/tasks/${id}`, data); // ✅ FIXED
+
       setTasks((prev) =>
         prev.map((task) => (task.id === id ? response.data : task))
       );
@@ -40,9 +45,11 @@ const Home = () => {
     }
   };
 
+  
   const deleteTask = async (id) => {
     try {
-      await client.delete(`/${id}`);
+      await client.delete(`/api/tasks/${id}`);   // ✅ FIXED
+
       setTasks((prev) => prev.filter((task) => task.id !== id));
     } catch {
       setError('Unable to delete task');
