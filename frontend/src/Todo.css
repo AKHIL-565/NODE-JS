@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: whitesmoke;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+
+.container {
+  width: 380px;
+  background: rgb(238, 234, 238);
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid burlywood;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.btn1 {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn1:hover {
+  background: #45a049;
+}
+
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #fafafa;
+  border: 1px solid burlywood;
+  border-radius: 8px;
+  gap: 10px;
+}
+
+
+.task h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+
+ 
+  flex: 1;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 18px;
+  font-weight: bold;
+
+  
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
+.btn-edit {
+  background: #2196f3;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.btn-edit:hover {
+  background: #0b7dda;
+}
+
+.btn2 {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn2:hover {
+  background: red;
+}
+
+.error {
+  text-align: center;
+  color: red; 
+  margin-bottom: 10px;
+}
